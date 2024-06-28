@@ -4,3 +4,8 @@ backend/GestionDeUsuarios/DatabaseManager/bin/Debug/
 backend/GestionDeUsuarios/DatabaseManager/bin/Release/
 backend/GestionDeUsuarios/GestionDeUsuarioTestUnit/bin/Debug/
 backend/GestionDeUsuarios/GestionDeUsuarioTestUnit/bin/Release/
+
+
+backend/GestionDeUsuarios/GestionDeUsuarios/obj/Debug/
+backend/GestionDeUsuarios/DatabaseManager/obj/
+backend/GestionDeUsuarios/GestionDeUsuarioTestUnit/obj/Debug/
