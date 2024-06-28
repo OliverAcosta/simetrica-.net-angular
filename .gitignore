@@ -1,2 +1,6 @@
-**/bin/Debug/
-**/bin/Release/
+backend/GestionDeUsuarios/GestionDeUsuarios/bin/Debug/
+backend/GestionDeUsuarios/GestionDeUsuarios/bin/Release/
+backend/GestionDeUsuarios/DatabaseManager/bin/Debug/
+backend/GestionDeUsuarios/DatabaseManager/bin/Release/
+backend/GestionDeUsuarios/GestionDeUsuarioTestUnit/bin/Debug/
+backend/GestionDeUsuarios/GestionDeUsuarioTestUnit/bin/Release/
