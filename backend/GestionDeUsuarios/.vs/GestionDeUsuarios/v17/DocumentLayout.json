@@ -1,0 +1,117 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Juan\\Desktop\\simetrica-.net-angular\\backend\\GestionDeUsuarios\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{000004B0-6B8E-441E-86ED-56792EC8A55E}|GestionDeUsuarios\\GestionDeUsuarios.csproj|c:\\users\\juan\\desktop\\simetrica-.net-angular\\backend\\gestiondeusuarios\\gestiondeusuarios\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{000004B0-6B8E-441E-86ED-56792EC8A55E}|GestionDeUsuarios\\GestionDeUsuarios.csproj|solutionrelative:gestiondeusuarios\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{000004B0-6B8E-441E-86ED-56792EC8A55E}|GestionDeUsuarios\\GestionDeUsuarios.csproj|c:\\users\\juan\\desktop\\simetrica-.net-angular\\backend\\gestiondeusuarios\\gestiondeusuarios\\controllers\\usertodoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{000004B0-6B8E-441E-86ED-56792EC8A55E}|GestionDeUsuarios\\GestionDeUsuarios.csproj|solutionrelative:gestiondeusuarios\\controllers\\usertodoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{000004B0-6B8E-441E-86ED-56792EC8A55E}|GestionDeUsuarios\\GestionDeUsuarios.csproj|c:\\users\\juan\\desktop\\simetrica-.net-angular\\backend\\gestiondeusuarios\\gestiondeusuarios\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{000004B0-6B8E-441E-86ED-56792EC8A55E}|GestionDeUsuarios\\GestionDeUsuarios.csproj|solutionrelative:gestiondeusuarios\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBD7F663-8C38-446C-BA7F-D47600D64FAE}|DatabaseManager\\DatabaseManager.csproj|c:\\users\\juan\\desktop\\simetrica-.net-angular\\backend\\gestiondeusuarios\\databasemanager\\entities\\usertodos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBD7F663-8C38-446C-BA7F-D47600D64FAE}|DatabaseManager\\DatabaseManager.csproj|solutionrelative:databasemanager\\entities\\usertodos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{000004B0-6B8E-441E-86ED-56792EC8A55E}|GestionDeUsuarios\\GestionDeUsuarios.csproj|c:\\users\\juan\\desktop\\simetrica-.net-angular\\backend\\gestiondeusuarios\\gestiondeusuarios\\authentication\\filters\\roles\\dynamics\\users\\authorizeapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{000004B0-6B8E-441E-86ED-56792EC8A55E}|GestionDeUsuarios\\GestionDeUsuarios.csproj|solutionrelative:gestiondeusuarios\\authentication\\filters\\roles\\dynamics\\users\\authorizeapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{000004B0-6B8E-441E-86ED-56792EC8A55E}|GestionDeUsuarios\\GestionDeUsuarios.csproj|c:\\users\\juan\\desktop\\simetrica-.net-angular\\backend\\gestiondeusuarios\\gestiondeusuarios\\controllers\\appbasecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{000004B0-6B8E-441E-86ED-56792EC8A55E}|GestionDeUsuarios\\GestionDeUsuarios.csproj|solutionrelative:gestiondeusuarios\\controllers\\appbasecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 286,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Juan\\Desktop\\simetrica-.net-angular\\backend\\GestionDeUsuarios\\GestionDeUsuarios\\appsettings.json",
+              "RelativeDocumentMoniker": "GestionDeUsuarios\\appsettings.json",
+              "ToolTip": "C:\\Users\\Juan\\Desktop\\simetrica-.net-angular\\backend\\GestionDeUsuarios\\GestionDeUsuarios\\appsettings.json",
+              "RelativeToolTip": "GestionDeUsuarios\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-07-01T08:28:01.731Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AuthorizeApp.cs",
+              "DocumentMoniker": "C:\\Users\\Juan\\Desktop\\simetrica-.net-angular\\backend\\GestionDeUsuarios\\GestionDeUsuarios\\Authentication\\Filters\\Roles\\Dynamics\\Users\\AuthorizeApp.cs",
+              "RelativeDocumentMoniker": "GestionDeUsuarios\\Authentication\\Filters\\Roles\\Dynamics\\Users\\AuthorizeApp.cs",
+              "ToolTip": "C:\\Users\\Juan\\Desktop\\simetrica-.net-angular\\backend\\GestionDeUsuarios\\GestionDeUsuarios\\Authentication\\Filters\\Roles\\Dynamics\\Users\\AuthorizeApp.cs",
+              "RelativeToolTip": "GestionDeUsuarios\\Authentication\\Filters\\Roles\\Dynamics\\Users\\AuthorizeApp.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-01T06:49:09.729Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AppBaseController.cs",
+              "DocumentMoniker": "C:\\Users\\Juan\\Desktop\\simetrica-.net-angular\\backend\\GestionDeUsuarios\\GestionDeUsuarios\\Controllers\\AppBaseController.cs",
+              "RelativeDocumentMoniker": "GestionDeUsuarios\\Controllers\\AppBaseController.cs",
+              "ToolTip": "C:\\Users\\Juan\\Desktop\\simetrica-.net-angular\\backend\\GestionDeUsuarios\\GestionDeUsuarios\\Controllers\\AppBaseController.cs",
+              "RelativeToolTip": "GestionDeUsuarios\\Controllers\\AppBaseController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAcAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-01T05:13:50.656Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Juan\\Desktop\\simetrica-.net-angular\\backend\\GestionDeUsuarios\\GestionDeUsuarios\\Program.cs",
+              "RelativeDocumentMoniker": "GestionDeUsuarios\\Program.cs",
+              "ToolTip": "C:\\Users\\Juan\\Desktop\\simetrica-.net-angular\\backend\\GestionDeUsuarios\\GestionDeUsuarios\\Program.cs",
+              "RelativeToolTip": "GestionDeUsuarios\\Program.cs",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAqwEwAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-01T04:45:06.663Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserTodosController.cs",
+              "DocumentMoniker": "C:\\Users\\Juan\\Desktop\\simetrica-.net-angular\\backend\\GestionDeUsuarios\\GestionDeUsuarios\\Controllers\\UserTodosController.cs",
+              "RelativeDocumentMoniker": "GestionDeUsuarios\\Controllers\\UserTodosController.cs",
+              "ToolTip": "C:\\Users\\Juan\\Desktop\\simetrica-.net-angular\\backend\\GestionDeUsuarios\\GestionDeUsuarios\\Controllers\\UserTodosController.cs",
+              "RelativeToolTip": "GestionDeUsuarios\\Controllers\\UserTodosController.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAUwBkAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-01T04:39:07.709Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserTodos.cs",
+              "DocumentMoniker": "C:\\Users\\Juan\\Desktop\\simetrica-.net-angular\\backend\\GestionDeUsuarios\\DatabaseManager\\Entities\\UserTodos.cs",
+              "RelativeDocumentMoniker": "DatabaseManager\\Entities\\UserTodos.cs",
+              "ToolTip": "C:\\Users\\Juan\\Desktop\\simetrica-.net-angular\\backend\\GestionDeUsuarios\\DatabaseManager\\Entities\\UserTodos.cs",
+              "RelativeToolTip": "DatabaseManager\\Entities\\UserTodos.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAIwBMAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-01T04:38:52.936Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

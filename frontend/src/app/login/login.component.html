@@ -1,0 +1,14 @@
+<div class="container">
+    <p class="login-box">
+        <label>Usuario:</label>
+        <mat-form-field appearance="outline">
+          <input matInput type="text" [(ngModel)]="user">
+        </mat-form-field>
+        <label>Clave:</label>
+        <mat-form-field appearance="outline">
+            <input matInput type="password" [(ngModel)]="pass">
+          </mat-form-field>
+        <button mat-stroked-button class="send-btn" (click)="login()">Iniciar Sesion</button>
+      </p>
+      
+</div>
