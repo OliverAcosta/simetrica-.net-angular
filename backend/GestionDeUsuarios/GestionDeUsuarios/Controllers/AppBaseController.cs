@@ -1,17 +1,25 @@
-﻿using GestionDeUsuarios.Authentication.Constants;
+﻿using DatabaseManager.Auth.Models;
+using GestionDeUsuarios.Authentication.Constants;
+using GestionDeUsuarios.Authentication.Filters.Roles.Dynamics.Users;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GestionDeUsuarios.Controllers
 {
-    [Route("/api/[controller]")]
-    [Controller]
+    [AuthorizeApp]
+    [Route("api/[controller]")]
+    [ApiController]
     public class AppBaseController: ControllerBase
     {
         protected int GetUserId()
         {
-            return -1;
+            try
+            {
+                return Convert.ToInt32(((AppUser)this.HttpContext.Items[AuthConsts.USERS])?.Id);
+            }catch(Exception)
+            {
+                return -1;
+            }
         }
-
         protected DateTime GetUserDatetimeFromOffset()
         {
             try

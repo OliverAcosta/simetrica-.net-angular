@@ -1,13 +1,13 @@
 ﻿using DatabaseManager.ContextEntities;
 using DatabaseManager.Entities;
-using GestionDeUsuarios.Authentication.Filters.Roles.Dynamics.Users;
 using GestionDeUsuarios.Commons;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Collections;
 
 namespace GestionDeUsuarios.Controllers
 {
-    [AuthorizeApp]
+    
     public class UserTodosController : AppBaseController
     {
         public readonly GestionDataContext db;
@@ -17,19 +17,23 @@ namespace GestionDeUsuarios.Controllers
             this.logger = logger;
             this.db = db;
         }
+        
 
-        [HttpPost("add")]
-        public async Task<ActionResult<RequestResult>> Add(UserTodos entity)
+        [HttpPost("Add")]
+        public async Task<ActionResult<RequestResult>> Add(UserTodosModel model)
         {
             try
             {
+                model.Id = 0;
+                model.UserId = GetUserId();            
+                var entity = model.ToEntity();
                 db.UserTodos.Add(entity);
                 await db.SaveChangesAsync();
 
                 return Ok(new RequestResult
                 {
                     Success = true,
-                    Result = entity,
+                    Result = entity.ToModel(),
                     Message = "entity added"
                 });
             }
@@ -46,23 +50,23 @@ namespace GestionDeUsuarios.Controllers
         }
 
         [HttpPost("update")]
-        public async Task<ActionResult<RequestResult>> Update(UserTodos entity)
+        public async Task<ActionResult<RequestResult>> Update(UserTodosModel model)
         {
             try
             {
-                var model = await db.UserTodos.AsNoTracking()
-                    .Where(m => m.UserId == GetUserId() && m.Id == entity.Id).FirstOrDefaultAsync();
+                var entity = await db.UserTodos.AsNoTracking()
+                    .Where(m => m.UserId == GetUserId() && m.Id == model.Id).FirstOrDefaultAsync();
 
-                if (model == null)
+                if (entity == null)
                     return NotFound(new RequestResult());
 
-                db.UserTodos.Update(entity);
+                db.UserTodos.Update(model.ToEntity());
                 await db.SaveChangesAsync();
 
                 return Ok(new RequestResult
                 {
                     Success = true,
-                    Result = entity,
+                    Result = entity.ToModel(),
                     Message = "entity added"
                 });
             }
@@ -78,18 +82,18 @@ namespace GestionDeUsuarios.Controllers
         }
 
         [HttpDelete("delete")]
-        public async Task<ActionResult<RequestResult>> Delete(UserTodos entity)
+        public async Task<ActionResult<RequestResult>> Delete(UserTodosModel model)
         {
             try
             {
-                var model = await db.UserTodos.Where(m => m.UserId == GetUserId() && m.Id == entity.Id).FirstOrDefaultAsync();
-                if (model == null) return NotFound(new RequestResult());
-                db.UserTodos.Remove(model);
+                var entity = await db.UserTodos.Where(m => m.UserId == GetUserId() && m.Id == model.Id).FirstOrDefaultAsync();
+                if (entity == null) return NotFound(new RequestResult());
+                db.UserTodos.Remove(entity);
                 await db.SaveChangesAsync();
                 return Ok(new RequestResult
                 {
                     Success = true,
-                    Result = model,
+                    Result = entity.ToModel(),
                     Message = $"entity {entity.Id} has been removed"
                 });
             }
@@ -114,7 +118,7 @@ namespace GestionDeUsuarios.Controllers
                 return Ok(new RequestResult
                 {
                     Success = true,
-                    Result = model
+                    Result = model.ToModel()
                 });
             }
             catch (Exception ex)
@@ -133,14 +137,20 @@ namespace GestionDeUsuarios.Controllers
         {
             try
             {
-                var result = await db.UserTodos.Where(m => m.UserId == GetUserId()).Skip(page * pagesize).Take(pagesize).ToArrayAsync();
+                int userid = GetUserId();
+                var total = db.UserTodos.Where(m => m.UserId == userid).Count();
+                var result = await db.UserTodos.Where(m => m.UserId == userid).Skip(page * pagesize).Take(pagesize).Select(m=> m.ToModel()).ToArrayAsync();
                 if (result.Length == 0)
                     return NotFound(new RequestResult());
 
                 return Ok(new RequestResult
                 {
                     Success = true,
-                    Result = result
+                    Result = new
+                    {
+                        datos = result,
+                        total
+                    }
                 });
             }
             catch (Exception ex)

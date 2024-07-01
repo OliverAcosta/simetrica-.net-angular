@@ -2,30 +2,24 @@
 
 namespace DatabaseManager.Entities
 {
-    [Table("USERTODOS")]
-    public class UserTodos
+  
+    public class UserTodosModel
     {
-        
-        [Column("ID")]
         public int Id { get; set; }
-        [Column("USERID")]
         public int UserId { get; set; }
-        [Column("TASK")]
         public string Task { get; set; }
-        [Column("DESCRIPTION")]
         public string Description { get; set; }
-        [Column("ISDONE")]
-        public byte isDone { get; set; } 
+        public bool isDone { get; set; } 
 
-        public UserTodosModel ToModel()
+        public UserTodos ToEntity()
         {
-            return new UserTodosModel
+            return new UserTodos
             {
                 Id = this.Id,
                 UserId = this.UserId,
                 Task = this.Task,
                 Description = this.Description,
-                isDone = this.isDone > 0 ? true : false
+                isDone =  (this.isDone) ? (byte)1 : (byte)0
             };
         }
     }

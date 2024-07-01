@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { environment } from '../endpoints/commons';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,5 +9,8 @@ import { Component } from '@angular/core';
   styleUrl: './dashboard.component.css'
 })
 export class DashboardComponent {
-
+ constructor()
+ {
+  environment.userVariable.checkForLogin();
+ }
 }

@@ -9,6 +9,8 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatListModule} from '@angular/material/list'
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatMenuModule} from '@angular/material/menu';
+import { LoginHelper } from './endpoints/loginHelper';
+import { environment } from './endpoints/commons';
 
 @Component({
   selector: 'app-root',
@@ -31,4 +33,12 @@ import {MatMenuModule} from '@angular/material/menu';
 })
 export class AppComponent {
   title = 'frontend';
+  public username = "";
+
+  constructor()
+  {
+    environment.userVariable.username.subscribe(subscriber=>{
+      this.username = subscriber;
+    });
+  }  
 }

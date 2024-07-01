@@ -1,0 +1,15 @@
+Buenos dias simetrica consulting
+1-Dentro de la carpeta Database hay dos tablas (UserTodos y Users) por favor montarlas en 
+la base de datos donde vayan a realizer la prueba.
+
+2-Editar el connection string in el appsetting  "oracle": "Data Source=192.168.2.15/XE;User Id=SYSTEM;Password=12345678;".
+
+3-Ejecutar el Proyecto del backend
+
+4-Ejecutar el Proyecto del frontent
+
+5-utilizar el usuario:reyazul y clave: $turey21 o cualquier otro en el dashboard
+
+6-probar la aplicacion en la pestaña de tareas
+
+

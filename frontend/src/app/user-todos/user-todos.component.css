@@ -1,0 +1,20 @@
+.container
+{
+    display: grid;
+    grid-template-columns: 65% 30%;
+    height: 90%;
+    color:black;
+    margin: auto;
+    border:1px solid #ddd;
+}
+.table-container
+{
+    border-right: 1px solid #ddd;
+}
+.input-container
+{
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    margin:16px;
+}

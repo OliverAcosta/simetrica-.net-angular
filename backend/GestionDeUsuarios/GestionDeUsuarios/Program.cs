@@ -1,5 +1,6 @@
 
 using Commons.Authentication.Token;
+using Commons.Webapi.Middlewares;
 using DatabaseManager.Auth.Models;
 using DatabaseManager.ContextEntities;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -27,7 +28,21 @@ namespace GestionDeUsuarios
                 options.UseOracle(config.GetConnectionString("oracle"));
                
             });
-            
+
+            builder.Services.AddCors(options =>
+            {
+               
+                options.AddPolicy("POLICY", builder =>
+                {
+                    builder
+                        .AllowAnyHeader()
+                        .AllowAnyMethod()
+                        .AllowAnyOrigin();
+                    
+                });
+            });
+
+
             builder.Services.AddAuthentication(options =>
             {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -41,12 +56,9 @@ namespace GestionDeUsuarios
               options.TokenValidationParameters = TokenUtility.TokenValidationParameters;
           });
 
-            builder.Services.AddIdentity<AppUser, AppRoles>()
-                           .AddEntityFrameworkStores<GestionDataContext>()
-                           .AddDefaultTokenProviders();
             var app = builder.Build();
+            app.UseCors("POLICY");
 
-            
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
@@ -54,10 +66,11 @@ namespace GestionDeUsuarios
                 app.UseSwaggerUI();
             }
 
+            app.UseMiddleware<JwtMiddleware>();
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
-
+            app.UseRouting();
 
             app.MapControllers();
 

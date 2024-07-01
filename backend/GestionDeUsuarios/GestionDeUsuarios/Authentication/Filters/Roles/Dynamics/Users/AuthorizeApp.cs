@@ -15,7 +15,7 @@ namespace GestionDeUsuarios.Authentication.Filters.Roles.Dynamics.Users
         /// </summary>
         public void OnAuthorization(AuthorizationFilterContext context)
         {
-           
+            return;
             var endpoint = context.HttpContext.GetEndpoint();
             if (endpoint?.Metadata?.GetMetadata<IAllowAnonymous>() != null )
             {

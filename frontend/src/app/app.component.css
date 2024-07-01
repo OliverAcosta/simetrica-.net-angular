@@ -23,7 +23,6 @@ mat-toolbar {
     display: flex;
     justify-content: center;
     align-items: center;
-  
     font-size: 2rem;
     color: lightgray;
   }
@@ -39,7 +38,4 @@ mat-toolbar {
     text-align: left;
   }
 
-  .app-container 
-  {
-    float:left;
-  }
+  

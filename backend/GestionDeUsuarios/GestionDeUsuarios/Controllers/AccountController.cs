@@ -5,9 +5,11 @@ using GestionDeUsuarios.Commons;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using GestionDeUsuarios.Authentication;
+using GestionDeUsuarios.Authentication.Filters.Roles.Dynamics.Users;
 
 namespace GestionDeUsuarios.Controllers
 {
+    [AuthorizeApp]
     public class AccountController:AppBaseController
     {
 
@@ -27,7 +29,7 @@ namespace GestionDeUsuarios.Controllers
         [HttpPost("Login")]
         [ProducesResponseType(typeof(RequestResult), 400)]
         [ProducesResponseType(typeof(RequestResult), 200)]
-        public async Task<ActionResult<RequestResult>> Login([FromBody, FromForm] UserModel model)
+        public async Task<ActionResult<RequestResult>> Login(UserModel model)
         {
             try
             {
@@ -84,56 +86,16 @@ namespace GestionDeUsuarios.Controllers
             }
         }
 
-
-        //[ProducesResponseType(typeof(RequestResult), 400)]
-        //[ProducesResponseType(typeof(RequestResult), 200)]
-        //[SuperAdmin]
-        //[HttpPost("register")]
-        //public async Task<ActionResult<RequestResult>> Register([FromBody, FromForm] RegisterModel model)
-        //{
-        //    try
-        //    {
-        //        var user = new AppUser
-        //        {
-        //            UserName = model.Username,
-        //            Email = model.Email,
-        //            PhoneNumber = model.PhoneNumber,
-        //        };
-
-        //        bool exist = appUser.ExistUser(user);
-        //        if (exist)
-        //        {
-        //            return BadRequest();
-        //        }
-
-        //        var result = await appUser.Register(model);
-        //        if (result.Succeeded)
-        //        {
-        //            if (AutoAddToRol)
-        //            {
-        //                bool r = await appUser.AddToRol(model.Username, "Guest");
-        //            }
-        //            return Ok(new RequestResult
-        //            {
-        //                Success = true,
-        //                Message = "User created"
-        //            });
-        //        }
-
-        //        return BadRequest(new RequestResult
-        //        {
-        //            Result = new 
-        //            {
-        //                Details = result.Errors
-        //            }
-        //        });
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return BadRequest();
-        //    }
-        //}
-
+        
+        [HttpGet("is-authenticated")]
+        public async Task<ActionResult<RequestResult>> IsAuthenticated()
+        {
+            return Ok(new RequestResult
+            {
+                Success = true,
+                Result = new object()
+            });
+        }
 
 
         [HttpPost("change-password")]
